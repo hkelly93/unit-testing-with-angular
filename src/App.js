@@ -16,7 +16,7 @@ function App() {
     /**
      * INTRODUCTION
      */
-    <TitleSlide title={title} subtitle="Harrison Kelly" />,
+    <TitleSlide title={title} subtitle="Harrison Kelly 10/27/2021" />,
 
     /**
      * WHAT ARE UNIT TESTS?
