@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 
 import useSetTitle from '../effects/useSetTitle';
 import useSetHistory from '../effects/useSetHistory';
@@ -15,7 +15,7 @@ import { ThemeProvider } from '../context/ThemeContext';
 import { configureRouter } from '../utils/route';
 import { calculateProgress } from '../utils/progress';
 
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 type Props = {
   title: string;
