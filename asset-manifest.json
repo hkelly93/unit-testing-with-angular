@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/unit-testing-with-angular/static/css/main.be8c2aaa.chunk.css",
-    "main.js": "/unit-testing-with-angular/static/js/main.2b870ff0.chunk.js",
-    "main.js.map": "/unit-testing-with-angular/static/js/main.2b870ff0.chunk.js.map",
+    "main.js": "/unit-testing-with-angular/static/js/main.b8adee93.chunk.js",
+    "main.js.map": "/unit-testing-with-angular/static/js/main.b8adee93.chunk.js.map",
     "runtime-main.js": "/unit-testing-with-angular/static/js/runtime-main.df4bd1dd.js",
     "runtime-main.js.map": "/unit-testing-with-angular/static/js/runtime-main.df4bd1dd.js.map",
-    "static/js/2.d34726a3.chunk.js": "/unit-testing-with-angular/static/js/2.d34726a3.chunk.js",
-    "static/js/2.d34726a3.chunk.js.map": "/unit-testing-with-angular/static/js/2.d34726a3.chunk.js.map",
+    "static/js/2.af750139.chunk.js": "/unit-testing-with-angular/static/js/2.af750139.chunk.js",
+    "static/js/2.af750139.chunk.js.map": "/unit-testing-with-angular/static/js/2.af750139.chunk.js.map",
     "index.html": "/unit-testing-with-angular/index.html",
     "static/css/main.be8c2aaa.chunk.css.map": "/unit-testing-with-angular/static/css/main.be8c2aaa.chunk.css.map",
-    "static/js/2.d34726a3.chunk.js.LICENSE.txt": "/unit-testing-with-angular/static/js/2.d34726a3.chunk.js.LICENSE.txt"
+    "static/js/2.af750139.chunk.js.LICENSE.txt": "/unit-testing-with-angular/static/js/2.af750139.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df4bd1dd.js",
-    "static/js/2.d34726a3.chunk.js",
+    "static/js/2.af750139.chunk.js",
     "static/css/main.be8c2aaa.chunk.css",
-    "static/js/main.2b870ff0.chunk.js"
+    "static/js/main.b8adee93.chunk.js"
   ]
 }
