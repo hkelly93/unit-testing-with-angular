@@ -302,14 +302,14 @@ function App() {
 
   <TitleSlide title="Assertions" secondary></TitleSlide>,
 
-  <Slide title="To make sure the values are correct..">
+  <Slide title="To make sure the values are correct...">
     <p>
       .toBeTruthy(), .toBeFalsy(), .toEqual(), .toContain(), ...
     </p>
     <p>
       ⚠ NOTE! These are method calls, NOT properties!
     </p>
-    <p>See the rest of them <a href="https://jasmine.github.io/api/3.10/global">here</a></p>
+    <p style={{fontSize: '1rem'}}>See the rest of them <a href="https://jasmine.github.io/api/3.10/global">here</a></p>
   </Slide>,
 
   <TitleSlide title="Setup" secondary></TitleSlide>,
