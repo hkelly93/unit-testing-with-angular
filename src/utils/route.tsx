@@ -4,7 +4,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 let ROUTES: Array<JSX.Element> = [];
 
 export const buildPath = (index: number): string =>
-  `/unit-testing-with-angular/${index === 0 ? '' : index}`;
+  `/${index === 0 ? '' : index}`;
 
 const buildRoutes = (components: Array<any>) => {
   if (ROUTES.length) return ROUTES;
