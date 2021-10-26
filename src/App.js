@@ -25,7 +25,7 @@ function App() {
       <img
         src="https://media.giphy.com/media/V4uGHRgz0zi6Y/source.gif"
         alt=""
-        style={{ height: '500px', paddingTop: '50px' }}
+        style={{ height: '400px', paddingTop: '50px' }}
       />
     </TitleSlide>,
 
@@ -51,7 +51,7 @@ function App() {
 
     <Slide title="EVERYTHING">
       <img
-        style={{ height: '500px' }}
+        style={{ height: '400px' }}
         src="https://media.giphy.com/media/1FR40e3b76Jnq/giphy.gif?cid=ecf05e47d4abi9ebzluxutk4urjd734wkdd9aqsmeai3mivz&rid=giphy.gif&ct=g"
       />
     </Slide>,
@@ -66,7 +66,7 @@ function App() {
     </Slide>,
 
     <Slide title="⚠ Scope!">
-      <img src="https://media.giphy.com/media/2tKbtEbIEsT6NpvoUw/giphy.gif"></img>
+      <img src="https://media.giphy.com/media/2tKbtEbIEsT6NpvoUw/giphy.gif" style={{height: '300px'}}></img>
     </Slide>,
 
     <Slide animate={false} title="⚠ Scope!">
@@ -76,7 +76,7 @@ function App() {
 
     <Slide title="But no one likes unit testing...">
       <img
-        style={{ height: '400px' }}
+        style={{ height: '300px' }}
         src="https://media.giphy.com/media/Js1qlQiDvj9ubktynP/giphy.gif"
       ></img>
     </Slide>,
@@ -171,8 +171,7 @@ function App() {
         {`it('should display the correct advisors', () => {
   fixture.detectChanges(); // Call ngOnInit.
   const advisorsList = fixture.nativeElement.querySelector('#advisors-list');
-  expect(advisorsList.textContent())
-    .toEqual('Laura Peeke Joe Peeke Sam Peeke Jr.');
+  expect(advisorsList.textContent()).toEqual('Laura Peeke Joe Peeke Sam Peeke Jr.');
 }`}
       </SyntaxHighlighter>
     </Slide>,
@@ -284,11 +283,7 @@ function App() {
       </SyntaxHighlighter>
 
       <p>
-        Updating the component's{' '}
-        <pre className="code" style={{ display: 'inline-block' }}>
-          shouldShowButton
-        </pre>{' '}
-        property updates the view.
+        Updating the component's shouldShowButton property updates the view.
       </p>
     </Slide>,
 
@@ -506,7 +501,7 @@ button.click();`}
   <SyntaxHighlighter
       language="typescript"
       theme={docco}
-      customStyle={{ fontSize: '1.35rem' }}
+      customStyle={{ fontSize: '1rem' }}
     >
       {`beforeEach(() => {
   // Add HttpClientTestingModule to catch API calls.
@@ -541,7 +536,7 @@ it('should call /api/advisors when getAdvisors() is called', (done) => {
         <li className={theme['with-bullet']}>
           When testing multiple cases, use forEach and pass data into the "it"
         </li>
-        <li className={theme['with-bullet']}>Always try to write your code from the template</li>
+        <li className={theme['with-bullet']}>Always test from the template</li>
         <li className={theme['with-bullet']}>When in doubt, "console.log" <strong>everything</strong></li>
       </ul>
   </Slide>,
@@ -549,11 +544,13 @@ it('should call /api/advisors when getAdvisors() is called', (done) => {
   <Slide title="Common Pitfalls" notes="">
     <ul>
       <li className={theme['with-bullet']}>Your code just isn't written in a way that can be tested easily</li>
-      <li className={theme['with-bullet']}>Writing too close to the implementation (aka private methods..) and having to constantly rewrite tests</li>
+      <li className={theme['with-bullet']}>Writing too close to the implementation and having to constantly rewrite tests</li>
       <li className={theme['with-bullet']}>Not adding IDs on elements that are hard to get</li>
       <li className={theme['with-bullet']}>Not adding components to the TestBed, resulting in them being unreachable</li>
     </ul>
   </Slide>,
+
+  <TitleSlide title="Questions?"></TitleSlide>
   ];
 
   return (

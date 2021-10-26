@@ -16,7 +16,6 @@ import { configureRouter } from '../../utils/route';
 import { calculateProgress } from '../../utils/progress';
 
 import defaultTheme from '../../theme.module.scss';
-console.log('called');
 const history = createBrowserHistory();
 
 type Props = {
