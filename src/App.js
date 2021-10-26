@@ -557,7 +557,7 @@ it('should call /api/advisors when getAdvisors() is called', (done) => {
   </Slide>,
 
   <Slide title="Common Pitfalls" notes="">
-    <ul>
+    <ul style={{fontSize: '2rem'}}>
       <li className={theme['with-bullet']}>Your code just isn't written in a way that can be tested easily</li>
       <li className={theme['with-bullet']}>Writing too close to the implementation and having to constantly rewrite tests</li>
       <li className={theme['with-bullet']}>Not adding IDs on elements that are hard to get</li>
