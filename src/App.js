@@ -300,6 +300,38 @@ function App() {
       </p>
     </Slide>,
 
+  <TitleSlide title="Assertions" secondary></TitleSlide>,
+
+  <Slide title="Use these to make sure the values are correct..">
+    <p>
+      .toBeTruthy(), .toBeFalsy(), .toEqual(), .toContain(), ...
+    </p>
+    <p>
+      ⚠ NOTE! These are method calls, NOT properties!
+    </p>
+    <p>See the rest of them <a href="https://jasmine.github.io/api/3.10/global">here</a></p>
+  </Slide>,
+
+  <TitleSlide title="Setup" secondary></TitleSlide>,
+
+  <Slide title="beforeEach, afterEach, what? 😕">
+    <p>These are used to setup components for each test.</p>
+    <p>For example, if you always get AdvisorService or spy on getAdvisors to return a mock, put it in the beforeEach!</p>
+  </Slide>,
+
+  <Slide title="TestBed? 🛌">
+    <p>This is where you setup your component. Think of it as a way to tell the component about the outside world.</p>
+    <p>This can be adding: services, pipes, and even mocks!</p>
+  </Slide>,
+
+  <Slide title="it, fit, xit, fdescribe???">
+    <ul>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>it = a test</li>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>fit = run <strong>ONLY</strong> this test</li>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>xit = skip this test</li>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>fdescribe = run <strong>ONLY</strong> this test suite</li>
+    </ul>
+  </Slide>,
 
   <Slide title="Querying...🔍" notes="Querying allows you to interact with the DOM/template and check against what the user would see if they were running the app. This is extremely powerful because it enables you to interact with elements on the page, just as a user would, without the need to write end to end tests.">
     <p>
@@ -557,11 +589,11 @@ it('should call /api/advisors when getAdvisors() is called', (done) => {
   </Slide>,
 
   <Slide title="Common Pitfalls" notes="">
-    <ul style={{fontSize: '2rem'}}>
-      <li className={theme['with-bullet']}>Your code just isn't written in a way that can be tested easily</li>
-      <li className={theme['with-bullet']}>Writing too close to the implementation and having to constantly rewrite tests</li>
-      <li className={theme['with-bullet']}>Not adding IDs on elements that are hard to get</li>
-      <li className={theme['with-bullet']}>Not adding components to the TestBed, resulting in them being unreachable</li>
+    <ul>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>Your code just isn't written in a way that can be tested easily</li>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>Writing too close to the implementation and having to constantly rewrite tests</li>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>Not adding IDs on elements that are hard to get</li>
+      <li className={theme['with-bullet']} style={{fontSize: '2rem'}}>Not adding components to the TestBed, resulting in them being unreachable</li>
     </ul>
   </Slide>,
 
