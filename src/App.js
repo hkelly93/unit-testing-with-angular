@@ -103,12 +103,14 @@ function App() {
       <p>You want to test your code at the point furthest from the implementation.</p>
     </Slide>,
 
-    <Slide animate={false}>
+    <Slide animate={false} notes="Testing the implementation directly leads to tests that break because code behind the scenes changed. This is a bad practice, especially when the
+    code didn't change how the component functions.">
       <p>You want to test your code at the point furthest from the implementation.</p>
       <p style={{textAlign: 'left'}}>This is usually through the template/view layer.</p>
     </Slide>,
 
-    <Slide animate={false}>
+    <Slide animate={false} notes="Testing the implementation directly leads to tests that break because code behind the scenes changed. This is a bad practice, especially when the
+    code didn't change how the component functions.">
     <p>You want to test your code at the point furthest from the implementation.</p>
     <p>This is usually through the template/view layer.</p>
     <p>This layer is the least connected to the implementation and won't break if the component changes (usually 😀).</p>
@@ -149,7 +151,10 @@ function App() {
       </div>
     </Slide>,
 
-    <Slide title="These tests would look like">
+    <Slide title="These tests would look like" notes="In the first test, we start off by calling detectChanges() to make sure that the component is initialized. After
+    that, fixture.nativeElement.querySelector is used to pull the household name (using the ID we set) from the DOM. The textContent method allows us to check what
+    text the selector contains. In this example, we're able to verify that it's set to the correct household name. Testing this way allows us to not have to rewrite the
+    unit test if the implementation changes.">
 
       <SyntaxHighlighter
         language="typescript"
@@ -176,17 +181,23 @@ function App() {
       </SyntaxHighlighter>
     </Slide>,
 
-    <Slide title="✋ WAIT">
+    <Slide title="✋ WAIT" notes="Writing tests that look at implementation details isn't always avoidable. There can be a case where you want to test this public method
+    directly, which is perfectly fine. It makes the unit test slightly more fragile, but if your code is functional, it isn't an issue. If all of your tests test the
+    implementation directly, you can run into cases where you have to rewrite tests often, or the component is broken in the template, but that part isn't tested.">
       <p>It's important to note that we aren't looking at properties in the component.</p>
     </Slide>,
 
-    <Slide title="✋ WAIT" animate={false}>
+    <Slide title="✋ WAIT" animate={false} notes="Writing tests that look at implementation details isn't always avoidable. There can be a case where you want to test this public method
+    directly, which is perfectly fine. It makes the unit test slightly more fragile, but if your code is functional, it isn't an issue. If all of your tests test the
+    implementation directly, you can run into cases where you have to rewrite tests often, or the component is broken in the template, but that part isn't tested.">
       <p>It's important to note that we aren't looking at properties in the component.</p>
 
       <p>You could rewrite these tests to tie them to the implementation...</p>
     </Slide>,
 
-  <Slide title="🙅‍♂️ BAD TESTS">
+  <Slide title="🙅‍♂️ BAD TESTS" notes="These tests are bad because they're testing the component directly, when it's just as easy to test the template. This can lead to thinking
+  your refactoring is covered by tests, but it isn't. The template could be broken here and the tests wouldn't show it. The second example is checking that the array is correct, but
+  isn't testing that they're passed into the list or anything correctly.">
 
   <SyntaxHighlighter
     language="typescript"
@@ -249,7 +260,9 @@ function App() {
       </div>
     </Slide>,
 
-    <Slide title="Example">
+    <Slide title="Example" notes="In this example, we're calling detectChanges() to make sure that the component is initialized before interacting with it. After the component
+    is initialized, we can flip the shouldShowButton flag to true, and then have the view detect the changes again. The second call to detectChanges() updates the view with
+    the changes we made to the component. This is needed, or else we won't be able to test the changes.">
       <SyntaxHighlighter
         language="typescript"
         theme={docco}
@@ -294,7 +307,7 @@ function App() {
     </p>
   </Slide>,
 
-  <Slide animate={false} title="Querying...🔍" notes="">
+  <Slide animate={false} title="Querying...🔍" notes="Querying allows you to interact with the DOM/template and check against what the user would see if they were running the app. This is extremely powerful because it enables you to interact with elements on the page, just as a user would, without the need to write end to end tests.">
     <p>
       Use querying as a way to interact with the template and retreive data.
     </p>
@@ -335,7 +348,7 @@ button.click();`}
       </SyntaxHighlighter>
   </Slide>,
 
-  <Slide title="Services...🍽" notes=""></Slide>,
+  <Slide title="Services...🍽" notes="">How to test them...</Slide>,
 
   <Slide title="Getting data">
     <p>Most data is retrieved through a service, with Subscriptions.</p>
@@ -367,7 +380,9 @@ button.click();`}
     </p>
   </Slide>,
 
-  <Slide animate={false} title="Using Spies!">
+  <Slide animate={false} title="Using Spies!" notes="In this example, we're getting the version of the service that is injected into the component by using TestBed.inject. This
+  lets us interact with the service, allowing us to use spies to add in mock Data. The spyOn call is basically telling the test to change the return it's return value and
+  return our mock data. This allows us to setup different test cases with different data, and fully test every part of the component.">
 <SyntaxHighlighter
         language="typescript"
         theme={docco}
