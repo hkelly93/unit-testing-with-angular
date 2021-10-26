@@ -302,7 +302,7 @@ function App() {
 
   <TitleSlide title="Assertions" secondary></TitleSlide>,
 
-  <Slide title="Use these to make sure the values are correct..">
+  <Slide title="To make sure the values are correct..">
     <p>
       .toBeTruthy(), .toBeFalsy(), .toEqual(), .toContain(), ...
     </p>
